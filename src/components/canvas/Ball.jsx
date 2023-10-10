@@ -14,8 +14,8 @@ const Ball = ({ icon }) => {
   const [decal] = useTexture([icon]);
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25} />
-      <directionalLight intensity={.75} position={[0, 0, 0.05]} />
+      <ambientLight intensity={0.2} />
+      <directionalLight intensity={0.7} position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
