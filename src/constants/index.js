@@ -41,6 +41,10 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "resume",
+    title: "Resume",
+  },
 ];
 
 const services = [
@@ -187,7 +191,7 @@ const testimonials = [
     name: "Ian Brown",
     designation: "COO",
     company: "DEF Corp",
-    image: ian
+    image: ian,
   },
   {
     testimonial:
