@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, menu, close, download } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
+  const handleCVDownload = () => {
+    downloadUtil("./CV/safwan-resume.pdf");
+  };
 
   return (
     <nav
@@ -25,7 +29,7 @@ const Navbar = () => {
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Safwan &nbsp;
-            <span className='sm:block hidden'>Hasan</span>
+            <span className='sm:block hidden'>Ahmed</span>
           </p>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
@@ -37,7 +41,17 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              {link.icon ? (
+                <span
+                  className='flex items-center gap-2'
+                  onClick={handleCVDownload}
+                >
+                  <a href={`#${link.id}`}>{link.title}</a>
+                  <img src={download} alt='logo' className='w-5 h-5' />
+                </span>
+              ) : (
+                <a href={`#${link.id}`}>{link.title}</a>
+              )}
             </li>
           ))}
         </ul>
@@ -67,7 +81,17 @@ const Navbar = () => {
                     setActive(link.title);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  {link.icon ? (
+                    <span
+                      className='flex items-center gap-2'
+                      onClick={handleCVDownload}
+                    >
+                      <a href={`#${link.id}`}>{link.title}</a>
+                      <img src={download} alt='logo' className='w-5 h-5' />
+                    </span>
+                  ) : (
+                    <a href={`#${link.id}`}>{link.title}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -77,5 +101,14 @@ const Navbar = () => {
     </nav>
   );
 };
+
+function downloadUtil(url) {
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = url.split("/").pop();
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
 
 export default Navbar;
