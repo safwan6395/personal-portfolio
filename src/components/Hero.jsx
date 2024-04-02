@@ -1,23 +1,9 @@
-import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import { computer } from "../assets";
 
-const Hero = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+const Hero = ({ width }) => {
   return (
     <section className='relative w-full h-screen mx-auto'>
       <div
@@ -41,7 +27,7 @@ const Hero = () => {
       {width > 480 ? (
         <ComputersCanvas />
       ) : (
-        <div className='absolute top-[500px] w-full flex justify-center'>
+        <div className='absolute top-[400px] w-full flex justify-center'>
           <img src={computer} alt='' className='w-80 scale-125' />
         </div>
       )}

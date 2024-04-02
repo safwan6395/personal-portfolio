@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
@@ -12,17 +13,30 @@ import {
 } from "./components";
 
 const App = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />
-          <Hero />
+          <Hero width={width} />
         </div>
 
         <About />
         <Experience />
-        <Tech />
+        <Tech width={width} />
         <Works />
         {/* <Feedbacks /> */}
         <div className='relative z-0'>
