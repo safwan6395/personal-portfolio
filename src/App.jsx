@@ -28,8 +28,8 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+      <div className="relative z-0 bg-primary">
+        <div className="bg-center bg-no-repeat bg-cover bg-hero-pattern">
           <Navbar />
           <Hero width={width} />
         </div>
@@ -39,7 +39,7 @@ const App = () => {
         <Tech width={width} />
         <Works />
         {/* <Feedbacks /> */}
-        <div className='relative z-0'>
+        <div className="relative z-0">
           <Contact />
           <StarsCanvas />
         </div>
