@@ -38,11 +38,11 @@ const Hero = () => {
         </div>
       </div>
 
-      {width > 768 ? (
+      {width > 480 ? (
         <ComputersCanvas />
       ) : (
-        <div className='absolute top-[50%] w-full flex justify-center'>
-          <img src={computer} alt='' className='w-80' />
+        <div className='absolute top-[500px] w-full flex justify-center'>
+          <img src={computer} alt='' className='w-80 scale-125' />
         </div>
       )}
 
