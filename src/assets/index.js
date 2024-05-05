@@ -22,12 +22,13 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import link from "./link.svg";
 
 import matrix from "./company/matrix_logo.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import loom from "./loom.png";
+import proshop from "./proshop.png";
+import forkify from "./forkify.png";
 
 import adam from "./people/adam.jpg";
 import ian from "./people/ian.jpg";
@@ -58,10 +59,11 @@ export {
   typescript,
   threejs,
   matrix,
-  carrent,
-  jobit,
-  tripguide,
+  loom,
+  proshop,
+  forkify,
   adam,
   ian,
   laura,
+  link,
 };

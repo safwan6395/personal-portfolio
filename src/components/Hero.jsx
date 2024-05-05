@@ -18,8 +18,8 @@ const Hero = ({ width }) => {
             Hi, I&apos;m <span className="text-[#915eff]">Safwan</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            A front-end enthusiast with a passion for creating captivating web
-            experiences using React and Angular.
+            A full-stack enthusiast with a passion for creating captivating web
+            experiences using React and Angular and Restful api based backend with node, express and mongodb
           </p>
         </div>
       </div>

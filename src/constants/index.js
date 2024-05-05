@@ -12,9 +12,9 @@ import {
   nodejs,
   mongodb,
   git,
-  carrent,
-  jobit,
-  tripguide,
+  loom,
+  proshop,
+  forkify,
   threejs,
   adam,
   ian,
@@ -54,7 +54,7 @@ const services = [
   {
     title: "Backend Developer",
     icon: backend,
-  }
+  },
 ];
 
 const technologies = [
@@ -101,7 +101,7 @@ const technologies = [
   {
     name: "git",
     icon: git,
-  }
+  },
 ];
 
 const experiences = [
@@ -112,11 +112,13 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Nav 2023 - Mar 2024",
     points: [
-      "Developed a strong foundation in Angular.",
-      "Collaborated on the design and implementation of new features.",
-      "Learned and applied front-end unit testing skills using Jasmine and Karma.",
+      "Developed proficiency in Angular.",
+      "Implemented front-end features for an investment bank, namely UBS (Union Bank of Switzerland)",
+      "Utilized unit testing framework jasmine and test runner karma to maximize the project's code coverage",
+      "Showcased excellent communication and collaboration abilities by working effectively within the team",
+      "Demonstrated strong problem-solving skills by overcoming many technical challenges",
     ],
-  }
+  },
 ];
 
 const testimonials = [
@@ -148,67 +150,82 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Loom",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A zoom clone that allows user to create instant meetings, schedule meeting, have personal meeting rooms and record their meetings to view later.",
+    tags: [
+      {
+        name: "next",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+      {
+        name: "stream",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "clerk",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+    ],
+    image: loom,
+    project_link: "https://loom-safwan.vercel.app/",
+    source_code_link: "https://github.com/safwan6395/loom/",
+  },
+
+  {
+    name: "Forkify",
+    description:
+      "Forkify is a comprehensive recipe web app, offering users a full suite of features to search, view, modify, bookmark, and even add recipes to their personal collection.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: forkify,
+    project_link: "https://forkify-webapp-v1.netlify.app/",
+    source_code_link: "https://github.com/safwan6395/forkify/",
+  },
+  {
+    name: "Proshop",
+    description:
+      "An E-commerce web application that allows user to browse and purchase the latest gadgets and accessories with ease. It also contains all the necessary admin features",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "pink-text-gradient",
       },
       {
         name: "mongodb",
         color: "green-text-gradient",
       },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: proshop,
+    source_code_link: "https://github.com/safwan6395/proshop/",
   },
 ];
 
